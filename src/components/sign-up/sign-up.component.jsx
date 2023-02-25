@@ -19,7 +19,7 @@ const SignUp = () => {
 
     const { displayName, email, password, confirmPassword } = formFields;
 
-    console.log(formFields)
+/*     console.log(formFields) */
 
     const reset = () => {
         setFormFields(defFormFields);
@@ -43,13 +43,20 @@ const SignUp = () => {
 
             reset();
 
-            console.log(user, displayName);
+/*             console.log(user, displayName); */
         } catch (err) {
-            if (err.code === 'auth/email-already-in-use') {
-                alert('Cannot create user. Email already in use')
-            } else { console.log('User creation with email & password error.', err) }
-        }
 
+            switch (err.code) {
+                case 'auth/email-already-in-use':
+                    alert('Cannot create user. Email already in use');
+                    break;
+                case 'auth/weak-password':
+                    alert('Password must have 6 or more characters');
+                    break;
+                default:
+                    console.log('User creation with email & password error.', err)
+            }
+        }
     }
 
     const handleChange = (event) => {
@@ -96,7 +103,7 @@ const SignUp = () => {
                 <FormInput
                     label={"Confirm Password"}
                     inputOptions={{
-                        type: "confirmPassword",
+                        type: "password",
                         required: true,
                         onChange: handleChange,
                         name: "confirmPassword",
