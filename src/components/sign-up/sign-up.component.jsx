@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { EmitFlags } from "typescript";
 
 import Button from '../button/button.component'
 import FormInput from "../form-input/form-input.component";
-import './sign-up-form.styles.scss'
+import './sign-up.styles.scss'
 
 import { createAuthUserWithEmailAndPassword, createUserDoc } from "../../utils/firebase/firebase.utils";
 
@@ -14,7 +13,7 @@ const defFormFields = {
     confirmPassword: ''
 }
 
-const SignUpForm = () => {
+const SignUp = () => {
 
     const [formFields, setFormFields] = useState(defFormFields);
 
@@ -112,4 +111,4 @@ const SignUpForm = () => {
     )
 }
 
-export default SignUpForm;
+export default SignUp;
