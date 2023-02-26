@@ -1,4 +1,9 @@
+.cart-dropdown-cont::-webkit-scrollbar{
+  display: none;
+}
+
 .cart-dropdown-cont {
+  overflow: hidden;
   position: absolute;
   width: 240px;
   height: 340px;
@@ -21,6 +26,10 @@
     display: flex;
     flex-direction: column;
     overflow: scroll;
+  }
+
+  .cart-items::-webkit-scrollbar{
+    display: none;
   }
 
   button {
