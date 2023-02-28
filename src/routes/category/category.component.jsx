@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, Fragment } from 'react';
 
 import { useParams } from 'react-router-dom'
 
@@ -12,18 +12,21 @@ const Category = () => {
     const { category } = useParams();
     const { categoriesMap } = useContext(CategoriesContext);
 
-    const [products, setProducts] = useState(categoriesMap[categor]);
+    const [products, setProducts] = useState(categoriesMap[category]);
 
-    useEffect(()=>{
+    useEffect(() => {
         setProducts(categoriesMap[category]);
     }, [category, categoriesMap])
 
-    return(
-        <div className='category-cont'>
-            {
-                products && products.map((product)=> <ProductCard key={product.id} product={product}></ProductCard>)
-            }
-        </div>
+    return (
+        <Fragment>
+            <h2 className='category-title'>{category.toUpperCase()}</h2>
+            <div className='category-cont'>
+                {
+                    products && products.map((product) => <ProductCard key={product.id} product={product}></ProductCard>)
+                }
+            </div>
+        </Fragment>
     )
 }
 
