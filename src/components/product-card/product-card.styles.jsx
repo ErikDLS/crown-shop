@@ -40,13 +40,13 @@ export const Footer = styled.div`
   font-size: 18px;
 `
 export const Name = styled.span`
-  width: 82%;
+
   margin-bottom: 15px;
   font-size: 25px
 `
 
 export const Price = styled.span`
-  width: 18%;
+
   font-size: 25px
 `
 
