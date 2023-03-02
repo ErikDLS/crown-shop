@@ -123,7 +123,7 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 
 export const signOutUser = async () => {
     signOut(auth)
-    console.log('logged off')
+/*     console.log('logged off') */
 }
 
 export const onAuthStateChangedListener = (callback) => {

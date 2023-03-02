@@ -17,7 +17,7 @@ const Navigation = () => {
     const { currentUser } = useContext(UserContext);
     const { isCartOpen } = useContext(CartContext)
 
-    console.log(currentUser)
+   /*  console.log(currentUser) */
 
     return (
         <Fragment>
@@ -32,8 +32,8 @@ const Navigation = () => {
                     {
                         currentUser ? (
                             <Fragment>
-                            <NavLink as='span' onClick={signOutUser}>{currentUser.displayName.toUpperCase()}</NavLink>
-                            <NavLink as='span' onClick={signOutUser}>SIGN OUT</NavLink>
+                                <NavLink as='span' onClick={signOutUser}>{currentUser.displayName}</NavLink>
+                                <NavLink as='span' onClick={signOutUser}>SIGN OUT</NavLink>
                             </Fragment>
                         ) : (
                             <NavLink to='/auth'>
