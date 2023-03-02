@@ -24,6 +24,7 @@ const SignIn = () => {
 
     const signInWithGoogle = async () => {
         await signInWithGooglePopup();
+        console.log('sign in google')
     };
 
     const handleSubmit = async (event) => {

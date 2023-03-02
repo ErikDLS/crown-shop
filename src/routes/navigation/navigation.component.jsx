@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import { ReactComponent as CrownLogo } from '../../assets/crown.svg'
 
@@ -17,9 +17,7 @@ const Navigation = () => {
     const { currentUser } = useContext(UserContext);
     const { isCartOpen } = useContext(CartContext)
 
-    const signOutHandler = async () => {
-        await signOutUser();
-    }
+    console.log(currentUser)
 
     return (
         <Fragment>
@@ -28,12 +26,15 @@ const Navigation = () => {
                     <CrownLogo className='logo'></CrownLogo>
                 </LogoContainer>
                 <NavLinks>
-                    <Link className="nav-link" to='/shop'>
+                    <NavLink className="nav-link" to='/shop'>
                         SHOP
-                    </Link>
+                    </NavLink>
                     {
                         currentUser ? (
-                            <NavLink as={'span'} onClick={signOutHandler}>SIGN OUT</NavLink>
+                            <Fragment>
+                            <NavLink as='span' onClick={signOutUser}>{currentUser.displayName.toUpperCase()}</NavLink>
+                            <NavLink as='span' onClick={signOutUser}>SIGN OUT</NavLink>
+                            </Fragment>
                         ) : (
                             <NavLink to='/auth'>
                                 SIGN IN
