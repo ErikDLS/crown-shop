@@ -2,7 +2,8 @@ import { useState } from "react";
 
 import Button from '../button/button.component'
 import FormInput from "../form-input/form-input.component";
-import './sign-up.styles.scss'
+
+import { SignUpContainer, H2 } from "./sign-up.styles";
 
 import { createAuthUserWithEmailAndPassword, createUserDoc } from "../../utils/firebase/firebase.utils";
 
@@ -54,7 +55,7 @@ const SignUp = () => {
                     alert('Password must have 6 or more characters');
                     break;
                 default:
-                    console.log('User creation with email & password error.', err)
+                    alert('User creation with email & password error.', err)
             }
         }
     }
@@ -66,8 +67,8 @@ const SignUp = () => {
     }
 
     return (
-        <div className="sign-up-container">
-            <h2>Don't have an account?</h2>
+        <SignUpContainer>
+            <H2>Don't have an account?</H2>
             <span>Sign up with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput
@@ -114,7 +115,7 @@ const SignUp = () => {
                     type="submit"
                 >Sign Up</Button>
             </form>
-        </div>
+        </SignUpContainer>
     )
 }
 

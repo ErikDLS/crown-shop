@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-import Button from '../button/button.component'
+import Button, { Button_Types_Classes } from '../button/button.component'
 import FormInput from "../form-input/form-input.component";
-import './sign-in.styles.scss'
+
+import { SignInContainer, H2, ButtonContainer } from "./sign-in.styles";
 
 import { signInAuthUserWithEmailAndPassword, signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
 
@@ -40,7 +41,7 @@ const SignIn = () => {
                     alert('Incorrect Password');
                     break;
                 default:
-                    console.log('User sign in error.', err)
+                    alert('User sign in error.', err)
             }
         }
     }
@@ -52,8 +53,8 @@ const SignIn = () => {
     }
 
     return (
-        <div className="sign-in-container">
-            <h2>Already have an account?</h2>
+        <SignInContainer>
+            <H2>Already have an account?</H2>
             <span>Sign in with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput
@@ -76,12 +77,12 @@ const SignIn = () => {
                         value: password
                     }}
                 ></FormInput>
-                <div className="buttons-container">
+                <ButtonContainer>
                     <Button type="submit">Sign In</Button>
-                    <Button type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In</Button>
-                </div>
+                    <Button type='button' buttonType={Button_Types_Classes.google} onClick={signInWithGoogle}>Google Sign In</Button>
+                </ButtonContainer>
             </form>
-        </div>
+        </SignInContainer>
     )
 }
 
