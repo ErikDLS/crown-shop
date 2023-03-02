@@ -36,7 +36,7 @@ const Checkout = () => {
                     )
                 })
             }
-            <Total>Total: ${total}</Total>
+            <Total>Total: US$ {total}</Total>
         </CheckoutContainer>
     )
 }

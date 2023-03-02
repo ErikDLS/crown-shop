@@ -40,10 +40,16 @@ export const Footer = styled.div`
   font-size: 18px;
 `
 export const Name = styled.span`
-  width: 90%;
+  width: 82%;
   margin-bottom: 15px;
+  font-size: 25px
 `
 
 export const Price = styled.span`
-  width: 10%;
+  width: 18%;
+  font-size: 25px
+`
+
+export const Sup = styled.sup`
+  font-size:15px
 `
