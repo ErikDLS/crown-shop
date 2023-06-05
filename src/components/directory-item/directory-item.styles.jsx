@@ -7,8 +7,8 @@ export const BgImg = styled.div`
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-image: ${({imageUrl})=>`url(${imageUrl})`}
-`
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+`;
 
 export const DirectoryItemBodyContainer = styled.div`
   height: 90px;
@@ -21,7 +21,7 @@ export const DirectoryItemBodyContainer = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
-  
+
   h2 {
     font-weight: bold;
     margin: 0 6px 0;
@@ -29,12 +29,12 @@ export const DirectoryItemBodyContainer = styled.div`
     color: #4a4a4a;
     text-transform: uppercase;
   }
-  
+
   p {
     font-weight: lighter;
     font-size: 16px;
   }
-`
+`;
 
 export const DirectoryItemContainer = styled(Link)`
   min-width: 30%;
@@ -46,9 +46,7 @@ export const DirectoryItemContainer = styled(Link)`
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
-  width: 100%;
-  flex-wrap: wrap;
-  
+
   &:first-child {
     margin-right: 7.5px;
   }
@@ -58,6 +56,7 @@ export const DirectoryItemContainer = styled(Link)`
 
   &:hover {
     cursor: pointer;
+
     ${BgImg} {
       transform: scale(1.1);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);

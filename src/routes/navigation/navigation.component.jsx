@@ -1,53 +1,64 @@
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import { ReactComponent as CrownLogo } from '../../assets/crown.svg'
+import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import { UserContext } from "../../context/user.context";
-import { CartContext } from "../../context/cart.context";
+import { selectCurrentUser } from "../../store/user/user.selector";
 
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { selectIsCartOpen } from "../../store/cart/cart.selector";
 
-import { NavigationContainer, NavLinks, NavLink, LogoContainer } from './navigation.styles'
+import { signOutStart } from "../../store/user/user.action";
+
+import {
+  NavigationContainer,
+  NavLinks,
+  NavLink,
+  LogoContainer,
+} from "./navigation.styles";
 
 const Navigation = () => {
-    const { currentUser } = useContext(UserContext);
-    const { isCartOpen } = useContext(CartContext)
+  const dispatch = useDispatch();
 
-   /*  console.log(currentUser) */
+  const currentUser = useSelector(selectCurrentUser);
 
-    return (
-        <Fragment>
-            <NavigationContainer>
-                <LogoContainer to='/'>
-                    <CrownLogo className='logo'></CrownLogo>
-                </LogoContainer>
-                <NavLinks>
-                    <NavLink className="nav-link" to='/shop'>
-                        SHOP
-                    </NavLink>
-                    {
-                        currentUser ? (
-                            <Fragment>
-                                <NavLink as='span' onClick={signOutUser}>{currentUser.displayName}</NavLink>
-                                <NavLink as='span' onClick={signOutUser}>SIGN OUT</NavLink>
-                            </Fragment>
-                        ) : (
-                            <NavLink to='/auth'>
-                                SIGN IN
-                            </NavLink>
-                        )
-                    }
-                    <CartIcon></CartIcon>
-                </NavLinks>
-                {isCartOpen && <CartDropdown></CartDropdown>}
-            </NavigationContainer>
-            <Outlet></Outlet>
-        </Fragment>
-    )
-}
+  const isCartOpen = useSelector(selectIsCartOpen);
+
+  const signOutUser = () => dispatch(signOutStart());
+
+  return (
+    <Fragment>
+      <NavigationContainer>
+        <LogoContainer to='/'>
+          <CrownLogo className='logo'></CrownLogo>
+        </LogoContainer>
+        <NavLinks>
+          <NavLink className='nav-link' to='/shop'>
+            SHOP
+          </NavLink>
+          {currentUser ? (
+            <Fragment>
+              <NavLink as='span' onClick={signOutUser}>
+                {currentUser.displayName}
+              </NavLink>
+              <NavLink as='span' onClick={signOutUser}>
+                SIGN OUT
+              </NavLink>
+            </Fragment>
+          ) : (
+            <NavLink to='/auth'>SIGN IN</NavLink>
+          )}
+          <CartIcon></CartIcon>
+        </NavLinks>
+        {isCartOpen && <CartDropdown></CartDropdown>}
+      </NavigationContainer>
+      <Outlet></Outlet>
+    </Fragment>
+  );
+};
 
 export default Navigation;
