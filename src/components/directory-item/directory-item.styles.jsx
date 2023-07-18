@@ -11,7 +11,7 @@ export const BgImg = styled.div`
 `;
 
 export const DirectoryItemBodyContainer = styled.div`
-  height: 90px;
+  height: auto;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ export const DirectoryItemBodyContainer = styled.div`
 
 export const DirectoryItemContainer = styled(Link)`
   min-width: 30%;
-  height: 240px;
+  height: 320px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
