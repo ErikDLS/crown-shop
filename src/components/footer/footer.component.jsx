@@ -56,9 +56,9 @@ const Footer = () => (
       </div>
 
       <div class='text-center p-3'>
-        © 2020 Copyright:
+        © 2023 Copyright: &nbsp;
         <a class='text-white' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+          Venture Desgin & Development
         </a>
       </div>
     </footer>

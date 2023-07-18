@@ -12,7 +12,7 @@ export const BgImg = styled.div`
 
 export const DirectoryItemBodyContainer = styled.div`
   height: auto;
-  padding: 0 25px;
+  padding: 0 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,16 +23,17 @@ export const DirectoryItemBodyContainer = styled.div`
   position: absolute;
 
   h2 {
+    padding-top: 1vw;
     font-weight: bold;
     margin: 0 6px 0;
-    font-size: 22px;
+    font-size: max(1em, 22px);
     color: #4a4a4a;
     text-transform: uppercase;
   }
 
   p {
     font-weight: lighter;
-    font-size: 16px;
+    font-size: max(1em, 18px);
   }
 `;
 

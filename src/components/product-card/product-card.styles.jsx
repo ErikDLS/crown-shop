@@ -4,9 +4,10 @@ export const ProductCardContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 25vw;
   align-items: center;
   position: relative;
+  padding: 2vw;
 
   img {
     width: 100%;
@@ -15,10 +16,10 @@ export const ProductCardContainer = styled.div`
     margin-bottom: 5px;
   }
   button {
-    width: 80%;
+    width: 75%;
     opacity: 0.7;
     position: absolute;
-    top: 255px;
+    top: 16vw;
     display: none;
   }
   &:hover {
@@ -34,22 +35,19 @@ export const ProductCardContainer = styled.div`
 
 export const Footer = styled.div`
   width: 100%;
-  height: 5%;
+  height: 25%;
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
-`
+`;
 export const Name = styled.span`
-
   margin-bottom: 15px;
-  font-size: 25px
-`
+  font-size: clamp(16px, 5vw, 22px);
+`;
 
 export const Price = styled.span`
-
-  font-size: 25px
-`
+  font-size: clamp(16px, 5vw, 22px);
+`;
 
 export const Sup = styled.sup`
-  font-size:15px
-`
+  font-size: clamp(8px, 2vw, 11px);
+`;
