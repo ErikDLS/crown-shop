@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
+import { useEffect, useRef } from "react";
+
 import {
   selectCartCount,
   selectIsCartOpen,
@@ -19,11 +21,31 @@ const CartIcon = () => {
 
   const toggleIsCartOpen = () => dispatch(setIsCartOpen(!isCartOpen));
 
+  const cartRef = useRef();
+
+  useEffect(() => {
+    const closeCart = e => {
+      console.log(e);
+      console.log(e.composedPath());
+      console.log(cartRef.current);
+      console.log(e.composedPath[0] !== cartRef.current);
+      if (!cartRef.current.contains(e.target)) {
+        dispatch(setIsCartOpen(false));
+      }
+    };
+
+    document.addEventListener("click", closeCart);
+
+    return () => document.removeEventListener("click", closeCart);
+  });
+
   return (
-    <CartIconContainer onClick={toggleIsCartOpen}>
-      <ShoppingIcon className={"shopping-icon"}></ShoppingIcon>
-      <ItemCount>{cartCount}</ItemCount>
-    </CartIconContainer>
+    <div ref={cartRef}>
+      <CartIconContainer onClick={toggleIsCartOpen}>
+        <ShoppingIcon className={"shopping-icon"}></ShoppingIcon>
+        <ItemCount>{cartCount}</ItemCount>
+      </CartIconContainer>
+    </div>
   );
 };
 

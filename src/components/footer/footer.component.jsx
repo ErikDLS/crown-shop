@@ -2,95 +2,95 @@ import { FooterContainer } from "./footer.styles";
 
 const Footer = () => (
   <FooterContainer>
-    <footer class='bg-dark text-center text-white'>
-      <div class='container p-4 pb-0'>
-        <section class='mb-4'>
+    <footer className='bg-dark text-center text-white'>
+      <div className='container p-4 pb-0'>
+        <section className='mb-4'>
           <a
-            class='btn btn-outline-light btn-floating m-1'
+            className='btn btn-outline-light btn-floating m-1'
             href='#!'
             role='button'
           >
-            <i class='fab fa-facebook-f'></i>
+            <i className='fab fa-facebook-f'></i>
           </a>
 
           <a
-            class='btn btn-outline-light btn-floating m-1'
+            className='btn btn-outline-light btn-floating m-1'
             href='#!'
             role='button'
           >
-            <i class='fab fa-twitter'></i>
+            <i className='fab fa-twitter'></i>
           </a>
 
           <a
-            class='btn btn-outline-light btn-floating m-1'
+            className='btn btn-outline-light btn-floating m-1'
             href='#!'
             role='button'
           >
-            <i class='fab fa-google'></i>
+            <i className='fab fa-google'></i>
           </a>
 
           <a
-            class='btn btn-outline-light btn-floating m-1'
+            className='btn btn-outline-light btn-floating m-1'
             href='#!'
             role='button'
           >
-            <i class='fab fa-instagram'></i>
+            <i className='fab fa-instagram'></i>
           </a>
 
           <a
-            class='btn btn-outline-light btn-floating m-1'
+            className='btn btn-outline-light btn-floating m-1'
             href='#!'
             role='button'
           >
-            <i class='fab fa-linkedin-in'></i>
+            <i className='fab fa-linkedin-in'></i>
           </a>
 
           <a
-            class='btn btn-outline-light btn-floating m-1'
+            className='btn btn-outline-light btn-floating m-1'
             href='#!'
             role='button'
           >
-            <i class='fab fa-github'></i>
+            <i className='fab fa-github'></i>
           </a>
         </section>
       </div>
 
-      <div class='text-center p-3'>
+      <div className='text-center p-3'>
         © 2023 Copyright: &nbsp;
-        <a class='text-white' href='https://mdbootstrap.com/'>
+        <a className='text-white' href='https://mdbootstrap.com/'>
           Venture Desgin & Development
         </a>
       </div>
     </footer>
   </FooterContainer>
-  //   <footer class='text-center text-lg-start bg-light text-muted'>
+  //   <footer className='text-center text-lg-start bg-light text-muted'>
   //     {/* <!-- Section: Social media --> */}
-  //     <section class='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+  //     <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
   //       {/* <!-- Left --> */}
-  //       <div class='me-5 d-none d-lg-block'>
+  //       <div className='me-5 d-none d-lg-block'>
   //         <span>Get connected with us on social networks:</span>
   //       </div>
   //       {/* <!-- Left --> */}
 
   //       {/* <!-- Right --> */}
   //       <div>
-  //         <a href='' class='me-4 text-reset'>
-  //           <i class='fab fa-facebook-f'></i>
+  //         <a href='' className='me-4 text-reset'>
+  //           <i className='fab fa-facebook-f'></i>
   //         </a>
-  //         <a href='' class='me-4 text-reset'>
-  //           <i class='fab fa-twitter'></i>
+  //         <a href='' className='me-4 text-reset'>
+  //           <i className='fab fa-twitter'></i>
   //         </a>
-  //         <a href='' class='me-4 text-reset'>
-  //           <i class='fab fa-google'></i>
+  //         <a href='' className='me-4 text-reset'>
+  //           <i className='fab fa-google'></i>
   //         </a>
-  //         <a href='' class='me-4 text-reset'>
-  //           <i class='fab fa-instagram'></i>
+  //         <a href='' className='me-4 text-reset'>
+  //           <i className='fab fa-instagram'></i>
   //         </a>
-  //         <a href='' class='me-4 text-reset'>
-  //           <i class='fab fa-linkedin'></i>
+  //         <a href='' className='me-4 text-reset'>
+  //           <i className='fab fa-linkedin'></i>
   //         </a>
-  //         <a href='' class='me-4 text-reset'>
-  //           <i class='fab fa-github'></i>
+  //         <a href='' className='me-4 text-reset'>
+  //           <i className='fab fa-github'></i>
   //         </a>
   //       </div>
   //       {/* <!-- Right --> */}
@@ -98,15 +98,15 @@ const Footer = () => (
   //     {/* <!-- Section: Social media --> */}
 
   //     {/* <!-- Section: Links  --> */}
-  //     <section class=''>
-  //       <div class='container text-center text-md-start mt-5'>
+  //     <section className=''>
+  //       <div className='container text-center text-md-start mt-5'>
   //         {/* <!-- Grid row --> */}
-  //         <div class='row mt-3'>
+  //         <div className='row mt-3'>
   //           {/* <!-- Grid column --> */}
-  //           <div class='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
+  //           <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
   //             {/* <!-- Content --> */}
-  //             <h6 class='text-uppercase fw-bold mb-4'>
-  //               <i class='fas fa-gem me-3'></i>Company name
+  //             <h6 className='text-uppercase fw-bold mb-4'>
+  //               <i className='fas fa-gem me-3'></i>Company name
   //             </h6>
   //             <p>
   //               Here you can use rows and columns to organize your footer content.
@@ -116,26 +116,26 @@ const Footer = () => (
   //           {/* <!-- Grid column -->
 
   //             <!-- Grid column --> */}
-  //           <div class='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
+  //           <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
   //             {/* <!-- Links --> */}
-  //             <h6 class='text-uppercase fw-bold mb-4'>Products</h6>
+  //             <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 Angular
   //               </a>
   //             </p>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 React
   //               </a>
   //             </p>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 Vue
   //               </a>
   //             </p>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 Laravel
   //               </a>
   //             </p>
@@ -143,26 +143,26 @@ const Footer = () => (
   //           {/* <!-- Grid column -->
 
   //             <!-- Grid column --> */}
-  //           <div class='col-md-3 col-lg-2 col-xl-2 mx-auto mb-4'>
+  //           <div className='col-md-3 col-lg-2 col-xl-2 mx-auto mb-4'>
   //             {/* <!-- Links --> */}
-  //             <h6 class='text-uppercase fw-bold mb-4'>Useful links</h6>
+  //             <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 Pricing
   //               </a>
   //             </p>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 Settings
   //               </a>
   //             </p>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 Orders
   //               </a>
   //             </p>
   //             <p>
-  //               <a href='#!' class='text-reset'>
+  //               <a href='#!' className='text-reset'>
   //                 Help
   //               </a>
   //             </p>
@@ -170,21 +170,21 @@ const Footer = () => (
   //           {/* <!-- Grid column -->
 
   //             <!-- Grid column --> */}
-  //           <div class='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
+  //           <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
   //             {/* <!-- Links --> */}
-  //             <h6 class='text-uppercase fw-bold mb-4'>Contact</h6>
+  //             <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
   //             <p>
-  //               <i class='fas fa-home me-3'></i> New York, NY 10012, US
+  //               <i className='fas fa-home me-3'></i> New York, NY 10012, US
   //             </p>
   //             <p>
-  //               <i class='fas fa-envelope me-3'></i>
+  //               <i className='fas fa-envelope me-3'></i>
   //               info@example.com
   //             </p>
   //             <p>
-  //               <i class='fas fa-phone me-3'></i> + 01 234 567 88
+  //               <i className='fas fa-phone me-3'></i> + 01 234 567 88
   //             </p>
   //             <p>
-  //               <i class='fas fa-print me-3'></i> + 01 234 567 89
+  //               <i className='fas fa-print me-3'></i> + 01 234 567 89
   //             </p>
   //           </div>
   //           {/* <!-- Grid column --> */}
@@ -195,9 +195,9 @@ const Footer = () => (
   //     {/* <!-- Section: Links  --> */}
 
   //     {/* <!-- Copyright --> */}
-  //     <div class='text-center p-4'>
+  //     <div className='text-center p-4'>
   //       © 2021 Copyright:
-  //       <a class='text-reset fw-bold' href='https://mdbootstrap.com/'>
+  //       <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
   //         MDBootstrap.com
   //       </a>
   //     </div>

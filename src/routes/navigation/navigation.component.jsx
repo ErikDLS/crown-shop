@@ -20,6 +20,7 @@ import {
   NavLinks,
   NavLink,
   LogoContainer,
+  PageContainer,
 } from "./navigation.styles";
 
 const Navigation = () => {
@@ -57,7 +58,9 @@ const Navigation = () => {
         </NavLinks>
         {isCartOpen && <CartDropdown></CartDropdown>}
       </NavigationContainer>
-      <Outlet></Outlet>
+      <PageContainer>
+        <Outlet></Outlet>
+      </PageContainer>
       <Footer></Footer>
     </Fragment>
   );

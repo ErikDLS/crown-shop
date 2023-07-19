@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 export const ProductCardContainer = styled.div`
-  width: 100%;
+  min-width: 100%;
+  height: 25vw;
   display: flex;
   flex-direction: column;
-  height: 25vw;
   align-items: center;
   position: relative;
   padding: 2vw;
+  margin-bottom: 5vh;
 
   img {
-    width: 100%;
-    height: 95%;
+    float: left;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     margin-bottom: 5px;
   }
@@ -41,13 +44,13 @@ export const Footer = styled.div`
 `;
 export const Name = styled.span`
   margin-bottom: 15px;
-  font-size: clamp(16px, 5vw, 22px);
+  font-size: clamp(10px, 2.5vw, 22px);
 `;
 
 export const Price = styled.span`
-  font-size: clamp(16px, 5vw, 22px);
+  font-size: clamp(10px, 2.5vw, 22px);
 `;
 
 export const Sup = styled.sup`
-  font-size: clamp(8px, 2vw, 11px);
+  font-size: clamp(5px, 1.25vw, 11px);
 `;

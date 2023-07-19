@@ -5,12 +5,11 @@ import { SpinnerContainer } from "../spinner/spinner.styles";
 export const BaseButton = styled.button`
   white-space: nowrap;
   min-width: 2vw;
-  width: auto;
-  height: 4vw;
+  height: 4vh;
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: clamp(8px, 2vw, 15px);
   background-color: black;
   color: white;
   text-transform: uppercase;
